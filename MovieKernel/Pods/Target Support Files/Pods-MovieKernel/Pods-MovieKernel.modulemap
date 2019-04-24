@@ -1,0 +1,6 @@
+framework module Pods_MovieKernel {
+  umbrella header "Pods-MovieKernel-umbrella.h"
+
+  export *
+  module * { export * }
+}
