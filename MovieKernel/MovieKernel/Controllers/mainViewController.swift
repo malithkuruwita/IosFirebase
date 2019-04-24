@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class mainViewController: UIViewController {
 
+    var handle: AuthStateDidChangeListenerHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +22,16 @@ class mainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            if(user != nil){
+                self.performSegue(withIdentifier: "goToHomeFromMain", sender: nil)
+            }else{
+                self.performSegue(withIdentifier: "goToLoginFromMain", sender: nil)
+            }
+        }
     }
     
 

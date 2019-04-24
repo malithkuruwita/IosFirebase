@@ -20,10 +20,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sVu-qe-gml"/>
                     </view>
+                    <connections>
+                        <segue destination="kFS-Qh-VBm" kind="presentation" identifier="goToLoginFromMain" id="jTF-Tx-mti"/>
+                        <segue destination="ulU-Ng-xWH" kind="presentation" identifier="goToHomeFromMain" id="E81-NS-GD4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgg-hI-liA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-122" y="88"/>
+            <point key="canvasLocation" x="249" y="92"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="DVU-98-xWM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="kFS-Qh-VBm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZsO-fl-MoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="-125"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="P2i-Iy-Lh0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="ulU-Ng-xWH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Obb-CO-l6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="59"/>
         </scene>
     </scenes>
 </document>
