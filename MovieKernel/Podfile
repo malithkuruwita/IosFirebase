@@ -10,6 +10,9 @@ target 'MovieKernel' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
 	pod 'GoogleSignIn'
+	pod 'FBSDKCoreKit'
+	pod 'FBSDKShareKit'
+	pod 'FBSDKLoginKit'
 
   target 'MovieKernelTests' do
     inherit! :search_paths

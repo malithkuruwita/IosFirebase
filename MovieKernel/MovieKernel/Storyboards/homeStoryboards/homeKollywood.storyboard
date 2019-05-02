@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mJd-TO-yY2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kollywood Movies-->
+        <scene sceneID="All-ru-YT3">
+            <objects>
+                <viewController id="HZz-8t-ifd" customClass="kollywoodViewController" customModule="MovieKernel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rig-84-hal">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1HM-dE-1dM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kollywood Movies" id="1N3-Ne-q1p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUY-xE-MXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="62.518740629685162"/>
+        </scene>
+        <!--Kollywood-->
+        <scene sceneID="VrI-g4-LEH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mJd-TO-yY2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Kollywood" image="icons8-k-filled-50" id="V93-CV-lnr"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yau-hd-h64">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HZz-8t-ifd" kind="relationship" relationship="rootViewController" id="gOb-dl-13C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GH0-AS-lGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="62.518740629685162"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-k-filled-50" width="25" height="25"/>
+    </resources>
+</document>

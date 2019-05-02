@@ -19,18 +19,18 @@ class registerViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //part of keyboard dismiss
-        email.delegate = self
-        password.delegate = self
-        passwordConfirm.delegate = self
+        //keyboard dismiss
+        self.email.delegate = self
+        self.password.delegate = self
+        self.passwordConfirm.delegate = self
     }
     
-    //keyboard dismiss
-    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when   'return' key pressed. return NO to ignore.
-    {
+    //keyboard dismiss with return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true;
+        return true
     }
+    
     //keyboard dismiss
     override func touchesBegan(_: Set<UITouch>, with: UIEvent?) {
         email.resignFirstResponder()
@@ -46,29 +46,40 @@ class registerViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func signUpAction(_ sender: Any) {
-        if password.text != passwordConfirm.text {
-            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
+        if email.text?.isEmpty ?? true || password.text?.isEmpty ?? true || passwordConfirm.text?.isEmpty ?? true{
+            let alertController = UIAlertController(title: "Error", message: "Empty fields are not allowed", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
-        }
-        else{
-            Auth.auth().createUser(withEmail: email.text!, password: password.text!){ (user, error) in
-                if error == nil {
-                    self.performSegue(withIdentifier: "goToHomeFromRegister", sender: self)
-                }
-                else{
-                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    
-                    alertController.addAction(defaultAction)
-                    self.present(alertController, animated: true, completion: nil)
+        }else{
+            if password.text != passwordConfirm.text {
+                let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            else{
+                Auth.auth().createUser(withEmail: email.text!, password: password.text!){ (user, error) in
+                    if error == nil {
+                        self.performSegue(withIdentifier: "goToHomeFromRegister", sender: self)
+                    }
+                    else{
+                        let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        
+                        alertController.addAction(defaultAction)
+                        self.present(alertController, animated: true, completion: nil)
+                    }
                 }
             }
         }
     }
     
+    @IBAction func goToSignIn(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToLoginFromRegister", sender: nil)
+    }
     /*
     // MARK: - Navigation
 

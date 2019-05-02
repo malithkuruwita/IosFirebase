@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qzi-2p-J7g">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bollywood Movies-->
+        <scene sceneID="bno-MV-qaP">
+            <objects>
+                <viewController id="um0-Ai-qux" customClass="bollywoodViewController" customModule="MovieKernel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zSg-Kq-zpF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ntY-Qy-Hcr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bollywood Movies" id="alT-3y-RVn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vw5-pV-1BX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351.2" y="69.715142428785612"/>
+        </scene>
+        <!--Bollywood-->
+        <scene sceneID="4gG-Mv-25F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qzi-2p-J7g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bollywood" image="icons8-b-filled-50" id="m2e-AI-H4Y"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZkU-GY-xaT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="um0-Ai-qux" kind="relationship" relationship="rootViewController" id="fNH-vp-42e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qK-hT-Zsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="69.715142428785612"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-b-filled-50" width="25" height="25"/>
+    </resources>
+</document>
